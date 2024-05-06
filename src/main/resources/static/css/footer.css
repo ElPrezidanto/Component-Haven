@@ -1,0 +1,127 @@
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px 10px 0;
+    background: #1e232f;
+    left: 0;
+    z-index: 100;
+    flex-shrink: 0;
+}
+
+footer .footer-container {
+    /*position: absolute;*/
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    bottom: 70px;
+    padding-bottom: 75px;
+}
+
+footer .footer-container .sec h2 {
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+footer .footer-container .sec p {
+    color: #fff;
+}
+
+footer .footer-container .sci {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+}
+
+footer .footer-container .sci li {
+    list-style: none;
+}
+
+footer .footer-container .sci li a {
+    width: 36px;
+    height: 36px;
+    background: #1e232f;
+    display: inline-grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+footer .footer-container .sci li a i {
+    color: #fff; /**/
+    font-size: 20px;
+}
+
+footer .footer-container .quicklinks {
+    position: relative;
+}
+
+footer .footer-container .quicklinks ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+footer .footer-container .contact .info {
+    position: relative;
+}
+
+footer .footer-container .contact .info li {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+}
+
+footer .footer-container .contact .info li span {
+    color: #fff;
+    font-size: 20px;
+}
+
+footer .footer-container .contact .info li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .copyrightText {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1e232f;
+    padding: 20px 100px 30px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 100;
+}
+
+@media (max-width: 991px) {
+    footer {
+        padding: 40px;
+    }
+
+    footer .footer-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    footer .copyrightText {
+        padding: 20px 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    footer .footer-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
+}

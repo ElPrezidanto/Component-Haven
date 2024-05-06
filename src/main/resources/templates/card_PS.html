@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Quiet Straight Power 12</title>
+    <link rel="stylesheet" href="https://libs.cdnjs.net/font-awesome/6.4.2/css/all.css">
+    <link rel="icon" href="/img/logo.PNG">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/cart.js"></script>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <a href="index" class="brand">Component Haven<img src="/img/logo.PNG"></a>
+        <input id="menu-toggle" type="checkbox"/>
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <nav class="menu">
+            <a href="index">Главная</a>
+            <a href="about">О нас</a>
+            <a href="catalog" id="selected-link">Каталог</a>
+            <a href="cart">Корзина</a>
+        </nav>
+    </div>
+</header>
+<main class="main-BQ">
+    <section class="product-card">
+        <div class="notification" id="notification">Товар добавлен в корзину</div>
+        <h2 class="comp_name">Be Quiet Power 12</h2>
+        <div class="BQ-block">
+            <div class="BQ-img">
+                <img class="BQ-img" src="/img/components/BQ.png" alt="BQ-img">
+            </div>
+            <div class="BQ-info">
+                <p class="BQ-about">Be Quiet Straight Power 12 – мощный блок питания с высокой
+                    эффективностью и надежностью. Он обеспечивает стабильное и эффективное
+                    энергопитание для вашей системы, минимизируя шум и обеспечивая оптимальные
+                    условия для работы комплектующих. С инновационными технологиями и модульным
+                    дизайном, этот блок питания идеально подходит для требовательных пользователей,
+                    ценящих качество и производительность.
+                    Управляйте питанием вашего компьютера с уверенностью, выбирая Be Quiet Straight Power 12.</p>
+                <div class="cost">
+                    <p class="BQ-price price">21 990₽</p>
+                    <button class="buy" onclick="addToCart(this)">
+                        <i class="fa-solid fa-cart-shopping"></i> <span>Добавить в корзину</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="BQ-characteristic">
+            <h2>Характеристики</h2>
+            <ul class="head-list">
+                <li class="type">
+                    <p class="attribute">Гарантия продавца / производителя:</p>
+                    <p class="descrip">120 мес.</p>
+                </li>
+                <li class="type">
+                    <p class="attribute">Страна-производитель:</p>
+                    <p class="descrip">Китай</p>
+                </li>
+                <li class="type">
+                    <p class="attribute">Форм-фактор:</p>
+                    <p class="descrip">ATX</p>
+                </li>
+                <li class="type">
+                    <p class="attribute">Цвет:</p>
+                    <p class="descrip">черный</p>
+                </li>
+                <li class="type">
+                    <p class="attribute">Производитель:</p>
+                    <p class="descrip">Be Quiet</p>
+                </li>
+                <li class="type">
+                    <p class="attribute">Мощность:</p>
+                    <p class="descrip"> 1200 Вт</p>
+                </li>
+                <li class="type">
+                    <p class="attribute">Сертификат 80 PLUS:</p>
+                    <p class="descrip"> Platinum</p>
+                </li>
+                <li class="type">
+                    <p class="attribute">Вентилятор:</p>
+                    <p class="descrip"> 135 x 135 мм, тихий</p>
+                </li>
+                <li class="type">
+                    <p class="attribute">Максимальный уровень шума:</p>
+                    <p class="descrip">22.1 дБ</p>
+                </li>
+                <li class="type">
+                    <p class="attribute">Модульность:</p>
+                    <p class="descrip"> Полностью модульный</p>
+                </li>
+                <li class="type">
+                    <p class="attribute">Количество разъемов SATA:</p>
+                    <p class="descrip">6</p>
+                </li>
+                <li class="type">
+                    <p class="attribute">Размеры (ШхВхГ):</p>
+                    <p class="descrip">150 x 86 x 160 мм</p>
+                </li>
+                <li class="type">
+                    <p class="attribute">Длина кабеля питания материнской платы:</p>
+                    <p class="descrip">60</p>
+                </li>
+                <li class="type">
+                    <p class="attribute">Технологии защиты:</p>
+                    <p class="descrip">OCP, OPP, OTP, OVP, SCP, SIP, UVP</p>
+                </li>
+
+                <!-- Другие характеристики товара -->
+            </ul>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="sec aboutus">
+            <h2>О нас</h2>
+            <p>Добро пожаловать в Component Haven - ваш идеальный выбор для высококачественных компьютерных комплектующих!
+                В Component Haven мы с увлечением предоставляем последнее и наиболее надежное железо для ваших потребностей. Счастливых сборок вашего ПК!
+                Команда Component Haven</p>
+            <ul class="sci">
+                <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-vk"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="sec quicklinks">
+            <h2>Поддержка</h2>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Помощь</a></li>
+            </ul>
+        </div>
+        <div class="sec quicklinks">
+            <h2>Каталог</h2>
+            <ul>
+                <li><a href="catalog">Процессоры</a></li>
+                <li><a href="catalog">Материнские платы</a></li>
+                <li><a href="catalog">Блоки Питания</a></li>
+                <li><a href="catalog">Кулеры</a></li>
+            </ul>
+        </div>
+        <div class="sec contact">
+            <h2>Контактная информация</h2>
+            <ul class="info">
+                <li>
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <p>
+                        <a href="tel:+79151292201">+7(812)525-25-52</a></p>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <p>
+                        <a href="mailto:enriki2004@mail.ru">ComponentHaven@mail.ru</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyrightText">
+        <p>©2023 Хананяев Энрики ИКБО-30-22. Все права защищены.</p>
+    </div>
+</footer>
+</body>
+</html>

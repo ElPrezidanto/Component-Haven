@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="icon" href="/img/logo.PNG">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://libs.cdnjs.net/font-awesome/6.4.2/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/about.js" defer></script>
+    <script src="/js/common.js" defer></script>
+
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <a href="index" class="brand">Component Haven<img src="/img/logo.PNG"></a>
+        <input id="menu-toggle" type="checkbox"/>
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <nav class="menu">
+            <a href="index">Главная</a>
+            <a href="#" id="selected-link">О нас</a>
+            <a href="catalog">Каталог</a>
+            <a href="cart">Корзина</a>
+            <div id="marker"></div>
+        </nav>
+    </div>
+</header>
+<main class="main_about">
+    <div class="advantages_about">
+        <h2 class="our_advantages">Почему стоит выбрать именно нас?</h2>
+        <div class="card-container">
+            <div class="card_about" id="card1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <img src="/img/advantages_about/assortment.png">
+                <p>Широкий ассортимент</p>
+            </div>
+
+            <div class="card_about" id="card2">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <img src="/img/advantages_about/price.png">
+                <p>Лучшие цены</p>
+            </div>
+
+            <div class="card_about" id="card3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <img src="/img/advantages_about/delivery.png">
+                <p>Быстрая доставка</p>
+            </div>
+
+            <div class="card_about" id="card4">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <img src="/img/advantages_about/quality.png">
+                <p>Гарантия качества</p>
+            </div>
+
+            <div class="card_about" id="card5">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <img src="/img/advantages_about/package.png">
+                <p>Надёжная упаковка</p>
+            </div>
+
+            <div class="card_about" id="card6">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <img src="/img/advantages_about/personal.png">
+                <p>Компетентный персонал</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="container">
+        <h2 class="slider-title">Наша команда</h2>
+        <div class="card__container swiper">
+            <div class="card__content">
+                <div class="swiper-wrapper" id="about-swiper-wrapper">
+
+                </div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next">
+                <i class="ri-arrow-right-s-line"></i>
+            </div>
+
+            <div class="swiper-button-prev">
+                <i class="ri-arrow-left-s-line"></i>
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <div class="about-text">
+        <h2>Наш сервис - ваш выбор в мире компьютерных комплектующих</h2>
+        <p>
+            Добро пожаловать в "Component Haven" - ваш источник высококачественных компьютерных комплектующих!
+            Мы предоставляем широкий ассортимент продукции от проверенных производителей, чтобы удовлетворить
+            ваши потребности в сфере IT.
+        </p>
+        <p>
+            Наша команда стремится обеспечить надежность и долговечность вашего компьютера, предлагая продукты
+            с выдающимся качеством. Мы гарантируем лучшие цены на рынке и обеспечиваем быструю доставку,
+            чтобы вы могли наслаждаться вашим обновленным оборудованием как можно скорее.
+        </p>
+        <p>
+            При выборе нашего сервиса, вы можете быть уверены в качестве, надежности и оперативной поддержке.
+            Мы упаковываем ваш заказ с заботой и предоставляем гарантию на все наши товары. Наши компетентные
+            специалисты всегда готовы помочь вам с выбором и ответить на ваши вопросы.
+        </p>
+    </div>
+
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="sec aboutus">
+            <h2>О нас</h2>
+            <p>Добро пожаловать в Component Haven - ваш идеальный выбор для высококачественных компьютерных
+                комплектующих!
+                В Component Haven мы с увлечением предоставляем последнее и наиболее надежное железо для ваших
+                потребностей. Счастливых сборок вашего ПК!
+                Команда Component Haven</p>
+            <ul class="sci">
+                <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-vk"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="sec quicklinks">
+            <h2>Поддержка</h2>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Помощь</a></li>
+            </ul>
+        </div>
+        <div class="sec quicklinks">
+            <h2>Каталог</h2>
+            <ul>
+                <li><a href="catalog">Процессоры</a></li>
+                <li><a href="catalog">Материнские платы</a></li>
+                <li><a href="catalog">Блоки Питания</a></li>
+                <li><a href="catalog">Кулеры</a></li>
+            </ul>
+        </div>
+        <div class="sec contact">
+            <h2>Контактная информация</h2>
+            <ul class="info">
+                <li>
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <p>
+                        <a href="tel:+79151292201">+7(812)525-25-52</a></p>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <p>
+                        <a href="mailto:enriki2004@mail.ru">ComponentHaven@mail.ru</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyrightText">
+        <p>©2023 Хананяев Энрики ИКБО-30-22. Все права защищены.</p>
+    </div>
+</footer>
+</body>
+</html>

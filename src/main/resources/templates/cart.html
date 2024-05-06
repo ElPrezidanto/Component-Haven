@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="https://libs.cdnjs.net/font-awesome/6.4.2/css/all.css">
+    <link rel="icon" href="/img/logo.PNG">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/common.js" defer></script>
+    <script src="/js/cart.js" defer></script>
+</head>
+<body onload="drawCart()">
+<header>
+    <div class="header-content">
+        <a href="index" class="brand">Component Haven<img src="/img/logo.PNG" alt="logo"></a>
+        <input id="menu-toggle" type="checkbox"/>
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <nav class="menu">
+            <a href="index" >Главная</a>
+            <a href="about">О нас</a>
+            <a href="catalog">Каталог</a>
+            <a href="#" id="selected-link">Корзина</a>
+            <div id="marker"></div>
+        </nav>
+    </div>
+</header>
+<main class="main-cart">
+    <h2>Корзина</h2>
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="sec aboutus">
+            <h2>О нас</h2>
+            <p>Добро пожаловать в Component Haven - ваш идеальный выбор для высококачественных компьютерных комплектующих!
+                В Component Haven мы с увлечением предоставляем последнее и наиболее надежное железо для ваших потребностей. Счастливых сборок вашего ПК!
+                Команда Component Haven</p>
+            <ul class="sci">
+                <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-vk"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="sec quicklinks">
+            <h2>Поддержка</h2>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Помощь</a></li>
+            </ul>
+        </div>
+        <div class="sec quicklinks">
+            <h2>Каталог</h2>
+            <ul>
+                <li><a href="catalog">Процессоры</a></li>
+                <li><a href="catalog">Материнские платы</a></li>
+                <li><a href="catalog">Блоки Питания</a></li>
+                <li><a href="catalog">Кулеры</a></li>
+            </ul>
+        </div>
+        <div class="sec contact">
+            <h2>Контактная информация</h2>
+            <ul class="info">
+                <li>
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <p>
+                        <a href="tel:+79151292201">+7(812)525-25-52</a></p>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <p>
+                        <a href="mailto:enriki2004@mail.ru">ComponentHaven@mail.ru</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyrightText">
+        <p>©2023 Хананяев Энрики ИКБО-30-22. Все права защищены.</p>
+    </div>
+</footer>
+</body>
+</html>

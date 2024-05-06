@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
+@import "base.css";
+@import "header.css";
+@import "footer.css";
+@import "about.css";
+@import "catalog.css";
+@import "card_PS.css";
+@import "cart.css";
+
+
+:root {
+    --first-color: hsl(38, 92%, 58%);
+    --first-color-light: hsl(38, 100%, 78%);
+    --first-color-alt: hsl(32, 75%, 50%);
+    --second-color: hsl(195, 75%, 52%);
+    --dark-color: hsl(212, 40%, 12%);
+    --white-color: hsl(212, 4%, 95%);
+    --body-color: hsl(212, 42%, 15%);
+    --container-color: hsl(212, 42%, 20%);
+    --body-font: "Bai Jamjuree", sans-serif;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+/*#main{
+    padding: 100px 20px 20px 20px;
+}*/
+.slider-title,
+.testimonial-heading h2,
+.advantages h2 {
+    font-size: 2.5rem;
+    color: #00ffff;
+}
+.container {
+    margin-top: 20px;
+    height: auto;
+    /*display: flex;*/
+    /*justify-content: center;
+    align-items: center;
+    flex-direction: column;*/
+}
+
+.slider-title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+
+}
+
+.card__container {
+    padding-block: 2rem;
+    max-width: max-content;
+}
+
+.card__content {
+    margin-inline: 1.75rem;
+    border-radius: 1.25rem;
+    overflow: hidden;
+}
+
+.card__article {
+    width: 300px;
+    border-radius: 1.25rem;
+    overflow: hidden;
+}
+
+.card__image {
+    position: relative;
+    background-color: var(--container-color);
+    padding-top: 1.5rem;
+    margin-bottom: -.75rem;
+
+}
+
+.card__data {
+    background-color: var(--container-color);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+    height: 260px;
+    z-index: 10;
+}
+
+.card__img {
+    width: 180px;
+    height: 215px;
+    top: -10px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.card__shadow {
+    width: 200px;
+    height: 200px;
+    background-color: #0f1219;
+    border-radius: 50%;
+    position: absolute;
+    top: 3.75rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    filter: blur(45px);
+}
+
+.card__name {
+    font-size: var(--h2-font-size);
+    color: var(--second-color);
+    margin-bottom: .25rem;
+    overflow: hidden;
+    max-height: 35px;
+}
+
+.card__description {
+    font-weight: 500;
+    margin-bottom: .25rem;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.price p {
+    color: var(--second-color);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: .2rem;
+    bottom: 0;
+}
+
+.card__button {
+    display: inline-block;
+    background-color: var(--first-color);
+    padding: .75rem 1.5rem;
+    border-radius: .25rem;
+    color: var(--dark-color);
+    font-weight: 600;
+    cursor: pointer;
+    bottom: 0;
+}
+
+/* Swiper class */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: initial;
+    height: initial;
+    font-size: 3rem;
+    color: var(--second-color);
+    display: none;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-pagination-bullet {
+    background-color: hsl(212, 32%, 40%);
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--second-color);
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#main .notification {
+    margin-top: 6em;
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 20px;
+    background-color: #1e232f;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 3s;
+    border: solid 2px black;
+    z-index: 999;
+}
+
+
+
+.advantages {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.advantages h2 {
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.advantages .cards {
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.advantages .cards .card {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 30px;
+    transition: 0.5s;
+}
+
+.advantages .cards .card::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+}
+
+.advantages .cards .card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+}
+
+
+.advantages .cards .card:hover:before,
+.advantages .cards .card:hover:after {
+    transform: skewX(0deg);
+    left: 20px;
+    width: calc(100% - 90px);
+
+}
+
+.advantages .cards .card:nth-child(1):before,
+.advantages .cards .card:nth-child(1):after {
+    background: linear-gradient(315deg, #ffbc00, #ff0058)
+}
+
+.advantages .cards .card:nth-child(2):before,
+.advantages .cards .card:nth-child(2):after {
+    background: linear-gradient(315deg, rgba(255, 0, 0, 0.8), #0000ff)
+}
+
+.advantages .cards .card:nth-child(3):before,
+.advantages .cards .card:nth-child(3):after {
+    background: linear-gradient(315deg, #607aff, #00d0ff)
+}
+
+.advantages .cards .card span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.advantages .cards .card span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.1s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08)
+}
+
+.advantages .cards .card:hover span::before {
+    top: -50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+
+.advantages .cards .card span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    animation-delay: -1s;
+}
+
+.advantages .cards .card:hover span:after {
+    bottom: -50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+
+@keyframes animate {
+    0%, 100% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translate(-5px);
+    }
+}
+
+.advantages .cards .card:hover span::before {
+    top: -60px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+
+.advantages .cards .card .content {
+    position: relative;
+    left: 0;
+    padding: 10px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    color: #fff;
+}
+
+.advantages .cards .card:hover .content {
+    left: -25px;
+    padding: 60px 40px;
+}
+
+.advantages .cards .card .content h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+
+}
+
+.advantages .cards .card .content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 400;
+}
+
+.advantages .cards .card .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.advantages .cards .card .content a:hover {
+    background: #ffcf4d;
+    border: 1px solid rgba(255, 0, 88, 0.4);
+    box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
+}
+
+#testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.testimonial-heading {
+    letter-spacing: 1px;
+    margin: 30px 0 10px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-family: 'Comfortaa', sans-serif;
+    color: #fff;
+    /*padding: 10px 20px;*/
+}
+
+.testimonial-heading h2 {
+    font-weight: 500;
+    font-family: 'Comfortaa', sans-serif;
+    text-align: center;
+}
+
+.testimonial-heading span {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.testimonials-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.testimonial-box {
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    background-color: var(--container-color);
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.name-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-user strong {
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.name-user span {
+    color: #979797;
+    font-size: 0.8rem;
+}
+
+.reviews {
+    color: #f9d71c;
+    display: inline-flex;
+}
+
+.box-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.client-comment p {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.testimonial-box:hover {
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+
+
+@media screen and (max-width: 320px) {
+    .card__data {
+        padding: 1rem;
+    }
+}
+
+/*For medium devices*/
+@media screen and (min-width: 768px) {
+    .card__content {
+        margin-inline: 3rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: block;
+    }
+    .
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+    .card__container {
+        max-width: 1120px;
+    }
+
+    .swiper-button-prev {
+        left: -1rem;
+    }
+
+    .swiper-button-next {
+        right: -1rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .testimonial-box {
+        width: 45%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-box {
+        width: 100%;
+    }
+
+    /*.testimonial-heading h2 {
+        font-size: 2rem;
+    }*/
+    .advantages{
+        padding-top: 0;
+    }
+    .slider-title,
+    .testimonial-heading h2,
+    .advantages h2 {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .box-top {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .reviews {
+        margin-top: 10px;
+    }
+}
+
+::selection {
+    background-color: rgba(0, 136, 246, 0.78);
+}
