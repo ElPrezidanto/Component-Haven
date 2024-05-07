@@ -27,5 +27,6 @@ public class RegistrationController {
                                           @RequestParam String password, Model model) {
         UserDTO userDTO = new UserDTO(name, password, email, "User");
         return new ResponseEntity<>(userService.addUser(userDTO), HttpStatus.OK);
+
     }
 }

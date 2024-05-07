@@ -6,9 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.lang.model.element.Name;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Data
