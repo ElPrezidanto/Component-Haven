@@ -22,7 +22,7 @@ public class UserService {
                 .email(userDTO.getEmail())
                 .roles(userDTO.getRoles())
                 .build();
-        userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
+        appUser.setPassword(passwordEncoder.encode(appUser.getPassword()));
         return userRepository.save(appUser);
     }
 

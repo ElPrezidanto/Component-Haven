@@ -20,7 +20,7 @@ function generateCard(name, imgSrc, description, price, id) {
     swiperWrapper.appendChild(article);
 }
 function redirect() {
-    window.location.href = `../../templates/html/card_PS.html`;
+    window.location.href = `html/card_PS.html`;
 }
 window.addEventListener("load", function () {
     generateCard("Intel Core i3", "../img/components/intel3.png", "Процессоры Intel Core i3 предоставляют отличную производительность .", "9 990₽","cpu");

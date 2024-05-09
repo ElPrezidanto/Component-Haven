@@ -26,7 +26,7 @@ public class CatalogController {
     private EntityManager entityManager;
 
     @GetMapping("catalog")
-    public String menu(
+    public String catalog(
             @RequestParam(value = "ask_name", required = false) String ask_name,
             @RequestParam(value = "filter", required = false) String filter,
             @RequestParam(value = "card_name", required = false) String card_name,
@@ -49,6 +49,8 @@ public class CatalogController {
             productCriteriaQuery.select(root).orderBy(builder.asc(root.get("price")));
             Query<Product> query = (Query<Product>) entityManager.createQuery(productCriteriaQuery);
             positions = query.getResultList();
+            model.addAttribute("positions", positions);
+        } else {
             model.addAttribute("positions", positions);
         }
         if (card_name != null) {

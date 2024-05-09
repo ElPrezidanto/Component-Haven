@@ -22,9 +22,10 @@ public class RegistrationController {
     }
 
     @RequestMapping(value = "/registration_page", method = RequestMethod.POST)
-
-    public ResponseEntity<AppUser> create(@RequestParam String email, @RequestParam String name,
-                                          @RequestParam String password, Model model) {
+    public ResponseEntity<AppUser> create(@RequestParam String email,
+                                          @RequestParam String name,
+                                          @RequestParam String password,
+                                          Model model) {
         UserDTO userDTO = new UserDTO(name, password, email, "User");
         return new ResponseEntity<>(userService.addUser(userDTO), HttpStatus.OK);
 

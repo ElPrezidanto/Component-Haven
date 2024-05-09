@@ -9,4 +9,5 @@ public class ProductDTO {
     private String name;
     private String text;
     private Integer price;
+    private byte[] img;
 }

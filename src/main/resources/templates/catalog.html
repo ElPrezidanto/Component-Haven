@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +25,7 @@
             <a href="about">О нас</a>
             <a href="#" id="selected-link">Каталог</a>
             <a href="cart">Корзина</a>
+            <a href="registration_page">Регистрация</a>
             <div id="marker"></div>
         </nav>
 
@@ -52,6 +53,10 @@
                 <div class="category" id="cooler"></div>
             </div>
         </div>
+    </div>
+    <div th:each="pos : ${positions}" class="menu_container">
+        <h3>LIST</h3>
+        <div th:insert="~{common/card :: card}"></div>
     </div>
 </main>
 

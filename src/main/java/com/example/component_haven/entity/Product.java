@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Base64;
+
 
 @Entity
 @Data
@@ -20,10 +22,10 @@ public class Product {
     private String name;
     private String text;
     private Integer price;
-    @Column
-    private String email;
-    private String roles;
-
+    private byte[] img;
+    public String generateBase64Image(){
+        return Base64.getEncoder().encodeToString(this.img);
+    }
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     @JoinColumn
     private AppUser user;
