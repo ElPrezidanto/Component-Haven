@@ -12,8 +12,8 @@ function generateCard(name, imgSrc, description, price, id) {
                 <h3 class="card__name">${name}</h3>
                 <p class="card__description">${description}</p>
                 <div class="price"><p>${price}</p></div>
-                <button class="card__button" onclick="redirect()">View More</button>
-                <button class="card__button" onclick="addToCartFromCatalogue(this)"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="card__button" ">View More</button>
+                <button class="card__button"><i class="fa-solid fa-cart-shopping"></i></button>
             </div>
         </article>
     `;

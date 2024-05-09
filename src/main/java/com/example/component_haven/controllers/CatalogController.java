@@ -50,9 +50,8 @@ public class CatalogController {
             Query<Product> query = (Query<Product>) entityManager.createQuery(productCriteriaQuery);
             positions = query.getResultList();
             model.addAttribute("positions", positions);
-        } else {
-            model.addAttribute("positions", positions);
         }
+
         if (card_name != null) {
             Product product = findProductByName(card_name, positions);
             productService.addToOrder(product, principal);

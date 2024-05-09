@@ -1,33 +1,51 @@
+.title-list-admin {
+    text-align: center;
+}
 
+.list-admin {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 5em;
+    & .card__data{
+        height: auto;
+    }
+}
 
-.category {
+#data_9 {
+    display: none;
+}
+
+.category, .positions{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     gap: 5em;
 }
 
-.main_catalog .catalog-title {
+.main_catalog .catalog-title{
     padding-top: 10px;
     font-size: 3.5rem;
     margin: 20px 0;
     text-align: center;
-    color: #00ffff; /* Цвет текста заголовка */
+    color: #00ffff;
     font-family: 'Comfortaa', sans-serif;
 
 }
-.catalog-category{
+
+.catalog-category {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
 }
+
 .category-title {
     text-align: center;
     margin: 20px 0;
     font-size: 2.5rem;
-    color:#00ffff;
+    color: #00ffff;
 }
 
 .main_catalog .card__container {
@@ -110,9 +128,11 @@
     margin-bottom: .2rem;
     bottom: 0;
 }
-.main_catalog .card__img__cart{
+
+.main_catalog .card__img__cart {
     display: none;
 }
+
 .main_catalog .card__button {
     display: inline-block;
     background-color: var(--first-color);
@@ -124,11 +144,23 @@
     cursor: pointer;
 }
 
+.btn {
+    margin-top: 0 !important;
+}
+
 @keyframes fadeInOut {
-    0% { opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .main_catalog .notification {
@@ -148,35 +180,39 @@
 }
 
 @media (max-width: 1089px) {
-    .category {
+    .category, .positions {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, auto);
         grid-gap: 20px;
     }
-    .main_catalog .card__description{
+
+    .main_catalog .card__description {
         max-height: 75px;
     }
 }
 
 @media (max-width: 666px) {
-    .category {
+    .category, .positions {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(1, auto);
         grid-gap: 10px;
         margin-bottom: 10px;
     }
-    .main_catalog .catalog-title{
+
+    .main_catalog .catalog-title {
         font-size: 2rem;
         margin-top: 0;
     }
+
     .category-title {
         text-align: center;
         margin: 20px 0;
         font-size: 1.5rem;
     }
-    .main_catalog{
+
+    .main_catalog {
         padding-top: 60px;
     }
 }

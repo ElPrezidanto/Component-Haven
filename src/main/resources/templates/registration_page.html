@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@
             <div class='menu-button'></div>
         </label>
         <nav class="menu">
-            <a href="index">Главная</a>
+            <a  href="index" >Главная</a>
             <a href="about">О нас</a>
             <a href="catalog">Каталог</a>
             <a href="cart">Корзина</a>
@@ -40,5 +40,6 @@
         <script src="/js/reg.js"></script>
     </div>
 </main>
+<footer th:insert="~{common/footer :: footer}"></footer>
 </body>
 </html>

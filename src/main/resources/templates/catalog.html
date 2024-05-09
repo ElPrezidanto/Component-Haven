@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,91 +25,55 @@
             <a href="about">О нас</a>
             <a href="#" id="selected-link">Каталог</a>
             <a href="cart">Корзина</a>
-            <a href="registration_page">Регистрация</a>
+            <a sec:authorize="!isAuthenticated()" href="registration_page">Регистрация</a>
             <div id="marker"></div>
         </nav>
 
     </div>
 </header>
 <main class="main_catalog">
+    <!-- <div class="catalog">
+         <h2 class="catalog-title">Каталог товаров</h2>
+         <div class="catalog-container">
+             <div class="notification" id="notification">Товар добавлен в корзину</div>
+             <div class="catalog-category">
+                 <h3 class="category-title" id="cpu-title">Процессоры</h3>
+                 <div class="category" id="cpu"></div>
+             </div>
+             <div class="catalog-category">
+                 <h3 class="category-title" id="MB-title">Материнские платы</h3>
+                 <div class="category" id="MB"></div>
+             </div>
+             <div class="catalog-category">
+                 <h3 class="category-title" id="PS-title">Блоки питания</h3>
+                 <div class="category" id="PS"></div>
+             </div>
+             <div class="catalog-category">
+                 <h3 class="category-title" id="cooler-title">Кулеры для процессоров</h3>
+                 <div class="category" id="cooler"></div>
+             </div>
+         </div>
+     </div>-->
+    <div class="search-block">
+        <form id="bar" class="bar" action="catalog" method="get">
+            <input id="data_1" type="text" name="ask_name" class="searchbar" title="Search" placeholder="Поиск комплектующих по названию">
+            <button id="search_button" type="submit" class="btn-0">Найти</button>
+        </form>
+        <form id="filter" class="bar" action="catalog" method="get">
+            <input id="data_5" type="text" name="filter" class="filter_bar" value="filter" title="Filter">
+            <button id="filter_button" type="submit" class="btn-1">Фильтровать по цене</button>
+        </form>
+    </div>
     <div class="catalog">
-        <h2 class="catalog-title">Каталог товаров</h2>
-        <div class="catalog-container">
-            <div class="notification" id="notification">Товар добавлен в корзину</div>
-            <div class="catalog-category">
-                <h3 class="category-title" id="cpu-title">Процессоры</h3>
-                <div class="category" id="cpu"></div>
-            </div>
-            <div class="catalog-category">
-                <h3 class="category-title" id="MB-title">Материнские платы</h3>
-                <div class="category" id="MB"></div>
-            </div>
-            <div class="catalog-category">
-                <h3 class="category-title" id="PS-title">Блоки питания</h3>
-                <div class="category" id="PS"></div>
-            </div>
-            <div class="catalog-category">
-                <h3 class="category-title" id="cooler-title">Кулеры для процессоров</h3>
-                <div class="category" id="cooler"></div>
+        <h3 class="catalog-title">Каталог товаров</h3>
+        <div class="positions">
+            <div th:each="pos : ${positions}" class="menu_container">
+                <div th:insert="~{common/card :: card}"></div>
             </div>
         </div>
-    </div>
-    <div th:each="pos : ${positions}" class="menu_container">
-        <h3>LIST</h3>
-        <div th:insert="~{common/card :: card}"></div>
     </div>
 </main>
-
-<footer>
-    <div class="footer-container">
-        <div class="sec aboutus">
-            <h2>О нас</h2>
-            <p>Добро пожаловать в Component Haven - ваш идеальный выбор для высококачественных компьютерных комплектующих!
-                В Component Haven мы с увлечением предоставляем последнее и наиболее надежное железо для ваших потребностей. Счастливых сборок вашего ПК!
-                Команда Component Haven</p>
-            <ul class="sci">
-                <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-vk"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-        </div>
-        <div class="sec quicklinks">
-            <h2>Поддержка</h2>
-            <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Политика конфиденциальности</a></li>
-                <li><a href="#">Помощь</a></li>
-            </ul>
-        </div>
-        <div class="sec quicklinks">
-            <h2>Каталог</h2>
-            <ul>
-                <li><a href="catalog">Процессоры</a></li>
-                <li><a href="catalog">Материнские платы</a></li>
-                <li><a href="catalog">Блоки Питания</a></li>
-                <li><a href="catalog">Кулеры</a></li>
-            </ul>
-        </div>
-        <div class="sec contact">
-            <h2>Контактная информация</h2>
-            <ul class="info">
-                <li>
-                    <span><i class="fa-solid fa-phone"></i></span>
-                    <p>
-                        <a href="tel:+79151292201">+7(812)525-25-52</a></p>
-                </li>
-                <li>
-                    <span><i class="fa-solid fa-envelope"></i></span>
-                    <p>
-                        <a href="mailto:enriki2004@mail.ru">ComponentHaven@mail.ru</a></p>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="copyrightText">
-        <p>©2023 Хананяев Энрики ИКБО-30-22. Все права защищены.</p>
-    </div>
-</footer>
+<footer th:insert="~{common/footer :: footer}"></footer>
 <!--<script src="../script.js"></script>-->
 </body>
 </html>

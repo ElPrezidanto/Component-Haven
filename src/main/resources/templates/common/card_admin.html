@@ -1,0 +1,13 @@
+<div class="category">
+    <article th:fragment="card" class="card__article swiper-slide">
+        <div class="card__image">
+            <img th:src="@{'data:image/png;base64,'+${pos.generateBase64Image()}}" alt="image" class="card__img">
+            <div class="card__shadow"></div>
+        </div>
+        <div class="card__data">
+            <h3 class="card__name" name="card_name" title="Order" th:text="${pos.name}"></h3>
+            <p class="card__description" th:text="${pos.text}"></p>
+            <div class="price"><p th:text="${#numbers.formatInteger(pos.price, 0, 'COMMA') + '₽'}" ></p></div>
+        </div>
+    </article>
+</div>

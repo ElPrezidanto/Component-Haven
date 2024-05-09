@@ -1,30 +1,20 @@
-<!--
-<article th:fragment="card" class="card__article swiper-slide">
-    <div class="card__image">
-        <img src="${pos.img}" alt="image" class="card__img">
-        <div class="card__shadow"></div>
-    </div>
-    <div class="card__data">
-        <h3 class="card__name">${pos.name}</h3>
-        <p class="card__description">${pos.text}</p>
-        <div class="price"><p>${pos.price}</p></div>
-        <button class="card__button btn" onclick="redirect()">View More</button>
-        <button class="card__button btn" onclick="addToCartFromCatalogue(this)" type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
-    </div>
-</article>-->
-<div th:fragment="card" class="wrapper">
-    <div class="product-img"></div>
-    <div class="product-info">
-        <div class="product-text">
-            <h1 th:text="${pos.name}"/>
-            <p th:text="${pos.text}"/>
+<div class="category">
+    <article th:fragment="card" class="card__article swiper-slide">
+        <div class="card__image">
+            <img th:src="@{'data:image/png;base64,'+${pos.generateBase64Image()}}" alt="image" class="card__img">
+            <div class="card__shadow"></div>
         </div>
-        <div class="product-price-btn">
-            <p><span class="card_span" th:text="${pos.price}"/> Руб</p>
-            <form id="order_form" class="order_form" action="menu" method="get">
+        <div class="card__data">
+            <h3 class="card__name" name="card_name" title="Order" th:text="${pos.name}"></h3>
+            <p class="card__description" th:text="${pos.text}"></p>
+            <div class="price"><p th:text="${pos.price + '₽'}" ></p></div>
+            <form id="order_form" class="order_form" action="catalog" method="get">
                 <input id="data_9" type="text" name="card_name" class="order_bar" th:value="${pos.name}" title="Order">
-                <button id="order_button" type="submit" class="btn-1 btn">Добавить в заказ</button>
+                <button id="order_button" type="submit" class="card__button btn">Add to cart</button>
             </form>
+            <!--            <button class="card__button btn">View More</button>-->
+            <!--            <button class="card__button btn" type="submit"><i class="fa-solid fa-cart-shopping"></i></button>-->
+
         </div>
-    </div>
+    </article>
 </div>

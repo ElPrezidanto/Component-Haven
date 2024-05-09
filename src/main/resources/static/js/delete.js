@@ -7,8 +7,9 @@ document.getElementById("formDel").addEventListener("submit", function(event) {
     }).then(response => {
         // Обработка ответа, если необходимо
         console.log("DELETE запрос выполнен успешно");
+        location.reload();
     }).catch(error => {
         console.error('Ошибка при отправке запроса:', error);
     });
-    event.target.reset();
+
 });

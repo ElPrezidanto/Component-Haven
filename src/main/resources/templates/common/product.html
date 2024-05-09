@@ -1,0 +1,13 @@
+<div th:fragment="product" class="product">
+    <div class="product-details">
+        <div class="product-title" th:text="${pos.name}" />
+        <p class="product-description"th:text="${pos.text}"/>
+        <div class="product-price" th:text="${pos.price}"/>
+    </div>
+    <div class="product-removal">
+        <form id="del_form" class="del_form">
+            <input type="text" name="del_name" class="del_bar" th:value="${pos.name}">
+            <button type="submit" class="remove-product">Удалить</button>
+        </form>
+    </div>
+</div>

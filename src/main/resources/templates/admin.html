@@ -27,23 +27,23 @@
     </div>
 </header>
 <main class="main-admin">
+    <br>
     <div class="">
         <h2>Добавить новое железо в каталог</h2>
         <form id="formPost">
-            Название комплектующего: <input id="data_name" type="text" name="title"/><br><br>
-            Цена: <input id="data_price" type="number" name="price"/><br><br>
-            Описание комплектующего: <input id="data_text" type="text" name="description"/><br><br>
+            Название комплектующего: <input id="data_name" type="text" name="name"><br>
+            Цена: <input id="data_price" type="text" name="price"><br>
+            Описание комплектующего: <input id="data_text" type="text" name="text"><br>
             <label for="data_img">Загрузите изображение (*.png)</label>
             <input id="data_img" type="file" placeholder="Добавьте изображение" accept="image/png">
             <input id="submit_btn" type="submit" class="btn" value="Добавить комплектующее"/>
         </form>
         <script src="/js/post.js"></script>
     </div>
-    <br>
     <div class="">
         <h2>Узнать ID комплектующего</h2>
-        <form id="formSearch">
-            Название комплектующего: <input id="search_data_1" type="text" name="name"/><br><br>
+        <form id="formSearch" action="admin" method="get">
+            Название комплектующего: <input id="search_data_1" type="text" name="ask_name"/><br><br>
             <input id="search_submit_btn" type="submit" class="btn" value="Узнать ID комплектующего"/>
         </form>
         <h3 th:text="${answer}" class="answer_h3"></h3>
@@ -51,33 +51,39 @@
     <div class="">
         <h2>Удалить железо</h2>
         <form id="formDel">
-            ID комплектующего: <input id="del_data_1" type="text" name="id"/><br><br>
+            ID комплектующего: <input id="del_data_1" type="text" name="del_id"/><br><br>
             <input id="del_submit_btn" type="submit" class="btn" value="Удалить"/>
         </form>
         <script src="/js/delete.js"></script>
     </div>
-    <div class="">
-        <h2>Список железа</h2>
-        <div th:each="pos: ${positions}">
-            <div th:fragment="pos" class="menuitem">
-                <div class="productName">
-                    <p th:text="${pos.name}"/>
-                </div>
-                <div class="productPrice">
-                    <p th:text="${pos.price}"/>
-                </div>
-                <div class="productInfo">
-                    <p th:text="${pos.text}"/>
-                </div>
-                <div class="productImg">
-                    <img th:src="@{'data:image/png;base64,'+${pos.generateBase64Image()}}" alt="">
-                </div>
-                <div class="productButton">
-                    <a>🛒</a>
-                </div>
+    <br>
+    <div class="list-admin_">
+        <h2 class="title-list-admin">Список железа</h2>
+        <div class="list-admin">
+            <div th:each="pos : ${positions}" class="menu_container">
+                <div th:insert="~{common/card_admin :: card}"></div>
             </div>
         </div>
     </div>
+    <!--<div th:each="pos: ${positions}">
+        <div th:fragment="pos" class="menuitem">
+            <div class="productName">
+                <p th:text="${pos.name}"/>
+            </div>
+            <div class="productPrice">
+                <p th:text="${pos.price}"/>
+            </div>
+            <div class="productInfo">
+                <p th:text="${pos.text}"/>
+            </div>
+            <div class="productImg">
+                <img th:src="@{'data:image/png;base64,'+${pos.generateBase64Image()}}" alt="">
+            </div>-->
+    <!--<div class="productButton">
+        <a>🛒</a>
+    </div>-->
+    <!--</div>
+</div>-->
 </main>
 </body>
 </html>

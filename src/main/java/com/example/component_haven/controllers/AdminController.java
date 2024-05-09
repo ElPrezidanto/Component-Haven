@@ -49,7 +49,7 @@ public class AdminController {
                                           @RequestParam String text, @RequestParam String imgBase64,
                                           Model model) {
         byte[] img = Base64.getDecoder().decode(imgBase64);
-        ProductDTO productDTO = new ProductDTO(name, text, price, img);
+        ProductDTO productDTO = new ProductDTO(name, price, text, img);
         return new ResponseEntity<>(productService.create(productDTO), HttpStatus.OK);
     }
 
