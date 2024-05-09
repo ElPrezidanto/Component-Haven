@@ -21,7 +21,7 @@ public class Product {
     @Column(name="name", unique = true)
     private String name;
     @Column
-    private Integer price;
+    private int price;
     @Column
     private String text;
     @Column

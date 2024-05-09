@@ -7,23 +7,29 @@
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     gap: 5em;
-    & .card__data{
+
+    & .card__data {
         height: auto;
     }
 }
 
-#data_9 {
+#data_1 {
+    margin: 20px 0;
+    width: 255px;
+}
+
+#data_9, #data_5 {
     display: none;
 }
 
-.category, .positions{
+.category, .positions {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     gap: 5em;
 }
 
-.main_catalog .catalog-title{
+.main_catalog .catalog-title {
     padding-top: 10px;
     font-size: 3.5rem;
     margin: 20px 0;
