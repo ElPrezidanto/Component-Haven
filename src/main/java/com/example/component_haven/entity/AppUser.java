@@ -12,7 +12,7 @@ import java.util.List;
 @Entity
 @Data
 @Builder
-@Table(name = "users")
+@Table(name = "Users")
 @NoArgsConstructor
 @AllArgsConstructor
 public class AppUser {
@@ -30,3 +30,5 @@ public class AppUser {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user")
     private List<Product> productList = new ArrayList<>();
 }
+
+
