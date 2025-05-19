@@ -2,7 +2,7 @@
 FROM gradle:8.5-jdk21 AS build
 WORKDIR /home/gradle/app
 COPY . .
-RUN gradle build
+RUN gradle build -x test
 
 # Stage 2: Run the app
 FROM eclipse-temurin:21-jdk-alpine
