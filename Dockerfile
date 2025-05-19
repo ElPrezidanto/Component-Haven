@@ -1,13 +1,15 @@
-FROM eclipse-temurin:21-jdk-alpine
-#  FROM ubuntu:latest
+# Stage 1: Build the app
+FROM gradle:8.5-jdk21 AS build
+WORKDIR /home/gradle/app
+COPY . .
+RUN gradle build
 
+# Stage 2: Run the app
+FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
 
-# Копируем JAR файл
-COPY build/libs/*.jar app.jar
+# Копируем готовый JAR из первого этапа
+COPY --from=build /home/gradle/app/build/libs/Component_haven-0.0.1-SNAPSHOT.jar app.jar
 
-# Открываем порт
 EXPOSE 8080
-
-# Запускаем приложение
 ENTRYPOINT ["java", "-jar", "app.jar"]
